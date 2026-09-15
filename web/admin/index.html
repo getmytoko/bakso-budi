@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin - Katalog Produk UMKM</title>
+  <style>
+    /* Sembunyikan iframe dan badge Netlify di halaman admin */
+    iframe#nl-badge-frame,
+    iframe[src*="about:srcdoc"],
+    [data-nl-ready],
+    .nl-badge,
+    .nl-wrap {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Widget Identitas Netlify: dipakai untuk login admin via Netlify Identity -->

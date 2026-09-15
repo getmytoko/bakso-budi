@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katalog Produk UMKM</title>
+  <title>MyToko</title>
   <meta name="description" content="Katalog online UMKM — pesan langsung via WhatsApp" />
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -140,5 +142,16 @@
   <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll ke atas">↑</button>
 
   <script src="app.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
