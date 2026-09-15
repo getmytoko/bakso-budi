@@ -4,6 +4,3 @@ node_modules/
 # Log & file simpanan sementara
 *.log
 .DS_Store
-
-# Setup offline lokal - jangan di-upload ke repositori
-setup.php
