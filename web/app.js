@@ -272,6 +272,14 @@ scrollTopBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Pembersih Otomatis Badge Netlify
+const removeNetlifyBadge = () => {
+  const badgeFrame = document.getElementById("nl-badge-frame");
+  if (badgeFrame) badgeFrame.remove();
+};
+window.addEventListener("DOMContentLoaded", removeNetlifyBadge);
+setInterval(removeNetlifyBadge, 1000);
+
 (async function init() {
   await muatPengaturan();
   await muatProduk();
