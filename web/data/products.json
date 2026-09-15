@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "nama": "Bolu Gulung Signature Talas Rasa Keju",
+      "kategori": "Signature",
+      "harga": "Rp46.000",
+      "gambar": "images/bolu-gulung-signature-talas.jpg",
+      "deskripsi": "Lembut dan creamy, perpaduan talas khas dengan rasa keju."
+    },
+    {
+      "nama": "Donat Kukus Cokelat",
+      "kategori": "Donat Kukus",
+      "harga": "Rp42.000",
+      "gambar": "images/donat-kukus-cokelat.jpg",
+      "deskripsi": ""
+    },
+    {
+      "nama": "Donat Kukus Talas Cokelat",
+      "kategori": "Donat Kukus",
+      "harga": "Rp25.000",
+      "gambar": "images/donat-kukus-talas-cokelat.jpg",
+      "deskripsi": ""
+    },
+    {
+      "nama": "Dessert Cup Cookies and Cream",
+      "kategori": "Dessert Cup",
+      "harga": "Rp15.000",
+      "gambar": "images/dessert-cup-cookies-cream.jpg",
+      "deskripsi": "Dessert cup manis dengan topping cookies and cream."
+    }
+  ]
+}

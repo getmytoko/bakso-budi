@@ -1,0 +1,6 @@
+﻿# Dependensi (node_modules) — jangan di-upload ke GitHub/Netlify
+node_modules/
+
+# Log & file simpanan sementara
+*.log
+.DS_Store

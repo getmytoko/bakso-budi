@@ -1,0 +1,13 @@
+{
+  "name": "mytoko-katalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Katalog UMKM statis berbasis Tailwind CSS + Decap CMS",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./web/style.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./web/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

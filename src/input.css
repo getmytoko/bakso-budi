@@ -1,0 +1,81 @@
+/* =====================================================================
+   MASUKAN UTAMA TAILWIND — JANGAN DIEDIT LANGSUNG
+   Semua perubahan CSS manual TULIS DI SINI (file input ini), lalu:
+     npm run build   → hasilnya otomatis keluar ke ./web/style.css
+     npm run watch   → ubah langsung, ter-rebuild otomatis tiap disimpan
+   ===================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================================================================
+   GAYA MANUAL YANG DIPINDAHKAN DARI style.css LAMA
+   (sengaja dibiarkan apa adanya supaya tidak mengubah perilaku asli)
+   ===================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+/* Sembunyikan scrollbar bilah kategori mobiles (tetap bisa digeser) */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===============================
+   TOMBOL SCROLL KE ATAS
+   =============================== */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  height: 48px;
+  width: 48px;
+  border-radius: 9999px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4c1d95; /* ungu tua */
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(76, 29, 149, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background: #6d28d9;
+}
+
+@media (max-width: 480px) {
+  .scroll-top-btn {
+    bottom: 18px;
+    right: 18px;
+    height: 44px;
+    width: 44px;
+  }
+}

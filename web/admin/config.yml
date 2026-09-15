@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: "id"
+
+media_folder: "web/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "produk"
+    label: "Produk"
+    label_singular: "Produk"
+    files:
+      - file: "web/data/products.json"
+        label: "Daftar Produk"
+        name: "produk"
+        description: "Kelola kumpulan produk katalog (tambah / edit / hapus)."
+        fields:
+          - label: "Kumpulan Produk"
+            name: "items"
+            widget: "list"
+            allow_add: true
+            collapsed: false
+            label_singular: "Produk"
+            summary: "{{fields.nama}} - {{fields.harga}}"
+            fields:
+              - { label: "Nama Produk", name: "nama", widget: "string" }
+              - label: "Kategori"
+                name: "kategori"
+                widget: "select"
+                options:
+                  - { label: "Signature", value: "Signature" }
+                  - { label: "Lapis Reguler", value: "Lapis Reguler" }
+                  - { label: "Donat Kukus", value: "Donat Kukus" }
+                  - { label: "Lapis Mini", value: "Lapis Mini" }
+                  - { label: "Dessert Cup", value: "Dessert Cup" }
+              - {
+                  label: "Harga",
+                  name: "harga",
+                  widget: "string",
+                  pattern: ["^Rp[0-9.]+$", "Format harga harus diawali Rp, contoh: Rp46.000"],
+                }
+              - { label: "Foto Produk", name: "gambar", widget: "image" }
+              - { label: "Deskripsi (opsional)", name: "deskripsi", widget: "text", required: false }
+
+  - name: "pengaturan_bisnis"
+    label: "Pengaturan Toko"
+    files:
+      - file: "web/data/settings.json"
+        label: "Pengaturan Toko"
+        name: "pengaturan"
+        description: "Data identitas toko yang tampil di bar paling atas website."
+        fields:
+          - { label: "Nama Toko", name: "nama_toko", widget: "string", default: "Toko Saya" }
+          - { label: "Nomor WhatsApp", name: "whatsapp_toko", widget: "string", default: "+6281234567890" }
+          - { label: "Foto Toko", name: "foto_toko", widget: "image", hint: "Foto fisik toko untuk halaman lokasi" }
+          - { label: "Alamat Toko", name: "alamat_toko", widget: "text", hint: "Deskripsi alamat lengkap fisik toko" }
