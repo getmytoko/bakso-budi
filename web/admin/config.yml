@@ -52,7 +52,7 @@ collections:
         name: "pengaturan"
         description: "Data identitas toko yang tampil di bar paling atas website."
         fields:
-          - { label: "Nama Toko", name: "nama_toko", widget: "string", default: "Toko Saya" }
+          - { label: "Nama Toko", name: "nama_toko", widget: "string", default: "MyToko" }
           - { label: "Nomor WhatsApp", name: "whatsapp_toko", widget: "string", default: "+6281234567890" }
           - { label: "Foto Toko", name: "foto_toko", widget: "image", hint: "Foto fisik toko untuk halaman lokasi" }
           - { label: "Alamat Toko", name: "alamat_toko", widget: "text", hint: "Deskripsi alamat lengkap fisik toko" }
